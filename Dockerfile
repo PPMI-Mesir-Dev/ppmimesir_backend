@@ -5,6 +5,8 @@ FROM base as builder
 WORKDIR /home/node/app
 COPY package*.json ./
 
+RUN sudo apt-get install curl wget -y
+
 COPY . .
 RUN yarn install
 RUN yarn build
