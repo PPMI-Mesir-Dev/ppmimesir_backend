@@ -17,12 +17,24 @@ import Video from "./collections/Video";
 import Kekeluargaan from "./collections/Kekeluargaan";
 import Lembaga from "./collections/Lembaga";
 import Pustaka from "./collections/Pustaka";
+import { Icon } from "./graphics/Icon";
+import { Logo } from "./graphics/Logo";
 
 export default buildConfig({
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
+    meta: {
+      titleSuffix: "- PPMI Mesir",
+    },
+    components: {
+      graphics: {
+        // Icon: Icon,
+        Logo: Logo,
+      },
+    },
   },
+  cors: "*",
   editor: slateEditor({}),
   collections: [
     Users,
