@@ -1,11 +1,11 @@
 import { CollectionConfig } from "payload/types";
 
-const Publikasi: CollectionConfig = {
-  slug: "publikasi",
+const Pustaka: CollectionConfig = {
+  slug: "pustaka",
   auth: false,
   labels: {
-    singular: "Publikasi",
-    plural: "Publikasi",
+    singular: "Pustaka",
+    plural: "Pustaka",
   },
   access: {
     read: () => true,
@@ -42,27 +42,10 @@ const Publikasi: CollectionConfig = {
       type: "date",
       required: true,
     },
-    {
-      name: "featured",
-      label: "Sematkan Publikasi Ini",
-      type: "radio",
-      options: [
-        // required
-        {
-          label: "Ya",
-          value: "yes",
-        },
-        {
-          label: "Tidak",
-          value: "no",
-        },
-      ],
-      defaultValue: "no",
-    },
   ],
   admin: {
     useAsTitle: "title",
   },
 };
 
-export default Publikasi;
+export default Pustaka;

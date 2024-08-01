@@ -14,6 +14,12 @@ const Video: CollectionConfig = {
       label: "Nama Playlist",
     },
     {
+      name: "description",
+      type: "textarea",
+      required: true,
+      label: "Deskripsi Playlist",
+    },
+    {
       name: "video",
       label: "Video",
       labels: {
@@ -38,9 +44,33 @@ const Video: CollectionConfig = {
         },
       ],
     },
+    {
+      name: "featured",
+      label: "Sematkan Video Ini",
+      type: "radio",
+      options: [
+        // required
+        {
+          label: "Ya",
+          value: "yes",
+        },
+        {
+          label: "Tidak",
+          value: "no",
+        },
+      ],
+      defaultValue: "no",
+    },
+    {
+      name: "provider",
+      label: "Penyedia Video",
+      type: "relationship",
+      required: true,
+      relationTo: ["lembaga"],
+    },
   ],
   admin: {
-    useAsTitle: "title",
+    useAsTitle: "name",
   },
 };
 

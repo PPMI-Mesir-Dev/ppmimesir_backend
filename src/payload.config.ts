@@ -16,6 +16,7 @@ import Publikasi from "./collections/Publikasi";
 import Video from "./collections/Video";
 import Kekeluargaan from "./collections/Kekeluargaan";
 import Lembaga from "./collections/Lembaga";
+import Pustaka from "./collections/Pustaka";
 
 export default buildConfig({
   admin: {
@@ -31,6 +32,7 @@ export default buildConfig({
     BadanOtonom,
     Media,
     Publikasi,
+    Pustaka,
     Video,
     Kekeluargaan,
     Lembaga,

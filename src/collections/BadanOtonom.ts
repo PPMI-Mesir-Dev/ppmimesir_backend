@@ -12,13 +12,13 @@ const BadanOtonom: CollectionConfig = {
   auth: false,
   fields: [
     {
-      name: "Nama",
+      name: "name",
       label: "Nama Badan Otonom",
       type: "text",
       required: true,
     },
     {
-      name: "Deskripsi",
+      name: "description",
       type: "richText",
       required: true,
     },
@@ -38,7 +38,7 @@ const BadanOtonom: CollectionConfig = {
     },
   ],
   admin: {
-    useAsTitle: "Nama",
+    useAsTitle: "name",
   },
 };
 
